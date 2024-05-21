@@ -1,0 +1,36 @@
+const NFTs = [];
+
+function mintNFT (_name, _age , _country , _income) {
+   const NFT = {
+      "Name":_name,
+      "Age": _age,
+      "Country" : _country,
+      "Income":_income
+   }
+   NFTs.push(NFT);
+   console.log("Minted by : " + _name);
+}
+
+function listNFTs () {
+    console.log("\n");
+   for(var i = 0 ; i < NFTs.length ; i++){
+      console.log("Name:\t" + NFTs[i].Name);
+      console.log("Age: \t" + NFTs[i].Age);
+      console.log("Country:" +  NFTs[i].Country);
+      console.log("Income:\t" + NFTs[i].Income);
+      console.log("\n");
+   }
+}
+
+
+function getTotalSupply() {
+   console.log(NFTs.length);
+}
+
+mintNFT("Abhishek " , 23 , "India" ,768151);
+mintNFT("Bob " ,  24 , "USA" , 512164);
+mintNFT("Charlie " , 25  , "Russia" , 1321649);
+listNFTs();
+getTotalSupply();
+
+
